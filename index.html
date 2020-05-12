@@ -7,10 +7,15 @@
   <body>
       <!-- テンプレート構文(元ネタ、雛形) -->
       <div id="app">
-        <!-- v-html : 文字列と見なされていたhtmlタグを展開する -->
-        <!-- v-htmlを使用する時は、入力できるフォームなどを設定してはいけない -->
-        <div>{{ html }}</div>
-        <div v-html="html">{{ html }}</div>
+        <!-- v-bind : 属性を反映させる -->
+        <!-- <a v-bind:href="url">Googel</a> -->
+        <!-- v-binfは :〜で省略可能 -->
+        <!-- <a :href="url">Googel</a> -->
+        <a :[attribute]="url">Googel</a>
+        <a :href="urlTwitter" :id="number">Twitter</a>
+        <!-- b-bindの中にオブジェクトを作ることも可能 -->
+        <!-- <a v-bind="{href: urlTwitter, id: number}">Twitter</a> -->
+        <a v-bind="twitterObject">Twitter2</a>
       </div>
 
 
