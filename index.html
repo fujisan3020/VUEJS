@@ -5,13 +5,13 @@
     <title></title>
   </head>
   <body>
-      <!-- テンプレート構文(元ネタ、雛形) -->
+      <!-- データバインディングというのは data と UI を結び付けるという意味で、双方向というのは data を更新すれば UI が更新されて、 UI を更新すれば data が更新されるという意味になります。 -->
+      <!-- v-modelはその双方向データバインディングを実現するためのディレクティブ -->
       <div id="app">
-        <p>現在、{{ number }}回クリックされています</p>
-        <!-- v-on :イベント発生時に特定の処理を行う -->
-        <!-- <button v-on:click="countUp(3)">カウントアップ</button> -->
-        <!-- <button @[event]="countUp(3)">カウントアップ</button> -->
-        <button @click="countUp(3)">カウントアップ</button>
+
+
+        <input type="text" v-model="message">
+        <h1>{{ message }}</h1>
 
       </div>
 
