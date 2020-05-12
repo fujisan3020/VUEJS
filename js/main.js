@@ -3,13 +3,12 @@ new Vue({
   //data: プロパティをかける
   data: {
     message: 'HelloWorld!',
-    number: 3,
-    ok: false,
   },
   //methods: 関数宣言の場所
   methods: {
     sayHi: function() {
-      return 'Hi';
+      this.message = 'hello VueJs';
+      return this.message;
     }
   }
 })
