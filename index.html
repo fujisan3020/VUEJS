@@ -9,7 +9,6 @@
       <div id="app">
         <p>現在、{{ number }}回クリックされています</p>
         <!-- v-on :イベント発生時に特定の処理を行う -->
-        <!-- <button v-on:click="number += 1">カウントアップ</button> -->
         <button v-on:click="countUp(3)">カウントアップ</button>
 
         <p v-on:mousemove="changeMousePosition(10, $event)" style="background-color: red;">マウスを載せてください</p>
@@ -19,9 +18,11 @@
         <!-- preventをstopを . で繋げることも可能 ex. prevent.stop -->
         <span v-on:mousemove.stop>反応させないでください</span>
         <p><a v-on:click.prevent="" href="google.com">Google</a></p>
+
+        <!-- キー修飾子 : キーボードの処理でイベントを発火させる-->
+        <input type="text" v-on:keyup.space.enter="myAlert">
+
       </div>
-
-
 
       <script src="vue.js"></script>
       <script src="js/main.js"></script>

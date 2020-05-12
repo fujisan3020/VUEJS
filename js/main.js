@@ -15,5 +15,8 @@ new Vue({
       this.x = event.clientX / divideNumber;
       this.y = event.clientY / divideNumber;
     },
+    myAlert() {
+      alert('指をキーボードから離しました');
+    }
   }
 })
