@@ -2,13 +2,10 @@ new Vue({
   el: '#app',
   //data: プロパティをかける
   data: {
-    message: 'HelloWorld!',
+    html: '<h1>h1です</h1>',
   },
   //methods: 関数宣言の場所
   methods: {
-    sayHi: function() {
-      this.message = 'hello VueJs';
-      return this.message;
-    }
+
   }
 })
