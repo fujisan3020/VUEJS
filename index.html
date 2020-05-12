@@ -10,7 +10,8 @@
         <p>現在、{{ number }}回クリックされています</p>
         <!-- v-on :イベント発生時に特定の処理を行う -->
         <!-- <button v-on:click="countUp(3)">カウントアップ</button> -->
-        <button v-on:[event]="countUp(3)">カウントアップ</button>
+        <!-- <button @[event]="countUp(3)">カウントアップ</button> -->
+        <button @click="countUp(3)">カウントアップ</button>
 
       </div>
 
