@@ -7,15 +7,18 @@
   <body>
       <!-- テンプレート構文(元ネタ、雛形) -->
       <div id="app">
-        <!-- v-bind : 属性を反映させる -->
-        <!-- <a v-bind:href="url">Googel</a> -->
-        <!-- v-binfは :〜で省略可能 -->
-        <!-- <a :href="url">Googel</a> -->
-        <a :[attribute]="url">Googel</a>
-        <a :href="urlTwitter" :id="number">Twitter</a>
-        <!-- b-bindの中にオブジェクトを作ることも可能 -->
-        <!-- <a v-bind="{href: urlTwitter, id: number}">Twitter</a> -->
-        <a v-bind="twitterObject">Twitter2</a>
+        <p>現在、{{ number }}回クリックされています</p>
+        <!-- v-on :イベント発生時に特定の処理を行う -->
+        <!-- <button v-on:click="number += 1">カウントアップ</button> -->
+        <button v-on:click="countUp(3)">カウントアップ</button>
+
+        <p v-on:mousemove="changeMousePosition(10, $event)" style="background-color: red;">マウスを載せてください</p>
+        <p>X :{{ x }}, Y: {{ y }}</p>
+
+        <!-- イベント修飾子 : イベントに付くドット(.)でつなげた修飾子 -->
+        <!-- preventをstopを . で繋げることも可能 ex. prevent.stop -->
+        <span v-on:mousemove.stop>反応させないでください</span>
+        <p><a v-on:click.prevent="" href="google.com">Google</a></p>
       </div>
 
 

@@ -1,19 +1,19 @@
 new Vue({
   el: '#app',
-  //data: プロパティをかける
+  //data: プロパティを書ける
   data: {
-    attribute: 'href',
-    url: 'https://google.com',
-    urlTwitter: 'https://twitter.com',
-    number: 31,
-    
-    twitterObject: {
-      href: 'https://twitter.com',
-      id: 31,
-    }
+    number: 0,
+    x: 0,
+    y: 0,
   },
   //methods: 関数宣言の場所
   methods: {
-
+    countUp: function(times) {
+      this.number += 1 * times;
+    },
+    changeMousePosition: function(divideNumber, event) {
+      this.x = event.clientX / divideNumber;
+      this.y = event.clientY / divideNumber;
+    },
   }
 })
