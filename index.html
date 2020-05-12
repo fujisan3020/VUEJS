@@ -5,19 +5,17 @@
     <title></title>
   </head>
   <body>
+      <!-- テンプレート構文(元ネタ、雛形) -->
       <div id="app">
         <p>{{ message }}</p>
-        <!-- 	Vue.jsが用意している特別な属性 -->
-        <button v-on:click="reversMessage">メッセージ反転</button>
+        <p>{{ number * 3 }}</p>
+        <p>{{ ok ? 'yes' : 'no' }}</p>
+        <p>{{ sayHi() }}</p>
       </div>
 
 
-      <!-- CDNの場合(オンライン) -->
-      <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
 
-      <!-- オフライン -->
       <script src="vue.js"></script>
-
       <script src="js/main.js"></script>
   </body>
 </html>
