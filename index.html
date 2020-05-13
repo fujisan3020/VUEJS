@@ -7,8 +7,11 @@
   <body>
       <div id="app">
         <p>{{ counter }}</p>
-        <button @click="counter += 1">+1</button>
-        <p>{{ lessThanThree }}</p>
+        <button @click="countUp">+1</button>
+        <button @click="countUp()">+1</button>
+        <!-- computedプロパティは()は必要ない、一方でmethodsは()が必要 -->
+        <p>{{ doubleCountComouted }}</p>
+        <p>{{ doubleCountMethod() }}</p>
       </div>
 
       <script src="vue.js"></script>
