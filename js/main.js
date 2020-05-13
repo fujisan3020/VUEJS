@@ -6,6 +6,9 @@ new Vue({
     styleObject: {
       color: 'red',
       'background-color': 'blue'
+    },
+    baseStyle: {
+      fontSize: '60px'
     }
   },
   //computed : メソッドを処理をプロパティにしたもの
