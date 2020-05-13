@@ -3,18 +3,12 @@ new Vue({
   //data: プロパティを書ける
   // データでは、動的なものを扱うことはできない。あくまで、初期値を扱うもの。
   data: {
-    isActive: true,
-    color: 'red',
-    bg: 'bg-blue'
+    textColor: 'red',
+    bgColor: 'blue'
   },
   //computed : メソッドを処理をプロパティにしたもの
   computed: {
-    classObject: function() {
-      return {
-      red: this.isActive,
-      'bg-blue': !this.isActive
-      }
-    }
+
   },
   //methods: 関数宣言の場所
   methods: {
