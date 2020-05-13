@@ -5,14 +5,15 @@
     <title></title>
   </head>
   <body>
-      <!-- データバインディングというのは data と UI を結び付けるという意味で、双方向というのは data を更新すれば UI が更新されて、 UI を更新すれば data が更新されるという意味になります。 -->
-      <!-- v-modelはその双方向データバインディングを実現するためのディレクティブ -->
       <div id="app">
 
-
-        <input type="text" v-model="message">
-        <h1>{{ message }}</h1>
-
+        <p>{{ counter }}</p>
+        <button @click="counter += 1">+1</button>
+        <p>{{ otherCounter }}</p>
+        <button @click="otherCounter += 1">別の+1</button>
+        <!-- <p>{{ counter > 3 ? '3以上' : '3以下' }}</p> -->
+        <p>{{ lessThanThree }}</p>
+        <p>{{ lessThanThreeMethod() }}</p>
       </div>
 
       <script src="vue.js"></script>
