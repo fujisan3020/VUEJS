@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
       <div id="app">
-        <p>{{ counter }}</p>
-        <button @click="countUp">+1</button>
-        <button @click="countUp()">+1</button>
-        <!-- computedプロパティは()は必要ない、一方でmethodsは()が必要 -->
-        <p>{{ doubleCountComouted }}</p>
-        <p>{{ doubleCountMethod() }}</p>
+        <!-- <h1 class="red bg-blue">Hello</h1> -->
+        <!-- <h1 :class="{red: true, 'bg-blue': false}">Hello</h1> -->
+        <!-- <h1 :class="{red: isActive, 'bg-blue': !isActive}">Hello</h1> -->
+        <h1 :class="classObject">Hello</h1>
+        <button @click="isActive = !isActive">装飾切り替え</button>
       </div>
 
       <script src="vue.js"></script>
