@@ -7,11 +7,10 @@
   </head>
   <body>
       <div id="app">
-        <!-- <h1 class="red bg-blue">Hello</h1> -->
-        <!-- <h1 :class="{red: true, 'bg-blue': false}">Hello</h1> -->
-        <!-- <h1 :class="{red: isActive, 'bg-blue': !isActive}">Hello</h1> -->
         <h1 :class="classObject">Hello</h1>
         <button @click="isActive = !isActive">装飾切り替え</button>
+
+        <h1 :class="[{red: isActive}, bg]">Hello</h1>
       </div>
 
       <script src="vue.js"></script>
