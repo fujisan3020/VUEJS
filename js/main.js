@@ -3,13 +3,8 @@ new Vue({
   //data: プロパティを書ける
   // データでは、動的なものを扱うことはできない。あくまで、初期値を扱うもの。
   data: {
-    styleObject: {
-      color: 'red',
-      'background-color': 'blue'
-    },
-    baseStyle: {
-      fontSize: '60px'
-    }
+    ok: false,
+    maybeOk: true,
   },
   //computed : メソッドを処理をプロパティにしたもの
   computed: {

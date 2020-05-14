@@ -7,7 +7,12 @@
   </head>
   <body>
       <div id="app">
-        <h1 :style="[styleObject, baseStyle]">Hello</h1>
+        <!-- v-if : 基本的にはif文と同じ -->
+        <!-- v-else : v-ifを使う場合は、v-ifとセットで使う -->
+        <!-- v-else-if : if文のelseifと同じ。v-elseと同様で、使う場合はv-ifとセットで使う。 -->
+        <p v-if="ok">OK!</p>
+        <p v-else-if="maybeOk">maybeOk</p>
+        <p v-else>Not OK...</p>
       </div>
 
       <script src="vue.js"></script>
