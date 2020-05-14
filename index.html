@@ -8,12 +8,21 @@
   <body>
       <div id="app">
         <ul>
+          <!-- 配列の場合、第二引数にインデックスが設定できる -->
           <li v-for="(fruit, index) in fruits">{{ fruit }}、{{ index + 1 }}番目</li>
         </ul>
         <ul>
           <!-- v-forでオブジェクトを使用する場合は、表示の順番は保証されない。
           なんで、そこを気にする場合は、配列を使用する。 -->
-          <li v-for="value in object">{{ value }}</li>
+          <!-- オブジェクトの場合、第二引数にkey、第三引数にindexを設定できる -->
+          <li v-for="(value, key, index) in object">{{ key }} - {{ value }} - ({{ index }})</li>
+        </ul>
+
+        <ul>
+          <template  v-for="fruit in fruits">
+            <li>{{ fruit }}</li>
+            <hr>
+          </template>
         </ul>
       </div>
 
