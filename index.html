@@ -24,6 +24,16 @@
             <hr>
           </template>
         </ul>
+
+        <ul>
+          <template>
+            <!-- v-forでは整数値も扱える -->
+            <!-- v-forの in は of に代用することも可能 -->
+            <li v-for="n in 10">{{ n }}</li>
+            <hr>
+            <li v-for="n of 10">{{ n }}</li>
+          </template>
+        </ul>
       </div>
 
 
