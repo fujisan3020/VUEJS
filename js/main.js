@@ -3,8 +3,7 @@ new Vue({
   //data: プロパティを書ける
   // データでは、動的なものを扱うことはできない。あくまで、初期値を扱うもの。
   data: {
-    ok: false,
-    maybeOk: true,
+    ok: true,
   },
   //computed : メソッドを処理をプロパティにしたもの
   computed: {
