@@ -3,12 +3,7 @@ new Vue({
   //data: プロパティを書ける
   // データでは、動的なものを扱うことはできない。あくまで、初期値を扱うもの。
   data: {
-    fruits: ["りんご","バナナ","ぶどう"],
-    object: {
-      firstName: 'shiga',
-      lastName: 'taro',
-      age: 30,
-    }
+    fruits: ["りんご","バナナ","ぶどう"]
   },
   //computed : メソッドを処理をプロパティにしたもの
   computed: {
@@ -16,7 +11,9 @@ new Vue({
   },
   //methods: 関数宣言の場所
   methods: {
-
+    remove: function() {
+      this.fruits.shift()
+    }
   },
   //watch
   //ウォッチャと呼ばれ、データが変更されたタイミングで処理を実行したいときに使います。（非同期の処理など） watchオプションのなかで「変更を監視したい変数: function() 」で関数を定義します。 定義する変数はdataプロパティと紐付いている必要があります。
