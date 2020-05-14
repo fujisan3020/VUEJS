@@ -4,6 +4,11 @@ new Vue({
   // データでは、動的なものを扱うことはできない。あくまで、初期値を扱うもの。
   data: {
     fruits: ["りんご","バナナ","ぶどう"],
+    object: {
+      firstName: 'shiga',
+      lastName: 'taro',
+      age: 30,
+    }
   },
   //computed : メソッドを処理をプロパティにしたもの
   computed: {

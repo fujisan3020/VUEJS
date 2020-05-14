@@ -7,8 +7,16 @@
   </head>
   <body>
       <div id="app">
-        <li v-for="(fruit, index) in fruits">{{ fruit }}、{{ index + 1 }}番目</li>
+        <ul>
+          <li v-for="(fruit, index) in fruits">{{ fruit }}、{{ index + 1 }}番目</li>
+        </ul>
+        <ul>
+          <!-- v-forでオブジェクトを使用する場合は、表示の順番は保証されない。
+          なんで、そこを気にする場合は、配列を使用する。 -->
+          <li v-for="value in object">{{ value }}</li>
+        </ul>
       </div>
+
 
       <script src="vue.js"></script>
       <script src="js/main.js"></script>
