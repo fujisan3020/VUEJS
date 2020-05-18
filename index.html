@@ -7,15 +7,12 @@
   </head>
   <body>
 
-      <div id="app">
-        <ul>
-          <!-- :key : key属性はtemplateタグは使えない -->
-          <div v-for="fruit in fruits " :key="fruit">
-            <p>{{ fruit }}</p>
-            <input type="text">
-          </div>
-        </ul>
-        <button @click="remove">先頭を削除</button>
+      <div id="app1">
+        {{ message }}
+      </div>
+
+      <div id="app2">
+        {{ message }}
       </div>
 
       <script src="vue.js"></script>
