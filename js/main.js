@@ -1,9 +1,8 @@
-var vm1 = new Vue({
-  el: '#app1',
+var vm = new Vue({
+  el: '#app',
   //data: プロパティを書ける
-  // データでは、動的なものを扱うことはできない。あくまで、初期値を扱うもの。
   data: {
-    message: 'インスタンス1',
+    message: 'こんにちは',
   },
   //computed : メソッドを処理をプロパティにしたもの
   computed: {
@@ -20,18 +19,11 @@ var vm1 = new Vue({
   }
 })
 
-// Vueインスタンスを変数に格納し、その変数を呼び出す事で、外部からでもアクセスすることが可能。
-// vm1.message = '書き換えられました';
+// Vueインスタンスに格納されているプロパティは、getter, setter, watcherが設定・付与され、リアクティブ(main.jsの値が変わると、index.htmlの値が変わること)になっている
+vm.message = '変更しました';
 
-// Vueイスタンスは複数作成することができるが、それによってロジックが複雑で、わかりにくくなるので、基本的にはなるべく使用しないようにする。
-var vm2 = new Vue({
-  el: '#app2',
-  data: {
-    message: 'インスタンス2',
-  },
-  methods: {
-    changeMessage1: function() {
-      vm1.message = 'インスタンス2から変えました'
-    }
-  }
-})
+// プロパティは後から追加することはできない
+// 後から追加されたプロパティは、getter, setter, watcherが設定・付与されておらず、リアクティブにならない
+vm.name = 'よしぴー'
+
+console.log(vm);
