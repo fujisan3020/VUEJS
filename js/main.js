@@ -3,6 +3,12 @@ var data = {
   name: 'よしぴー',
 }
 
+// コンポーネント : インスタンスを複数使い回すパーツ
+Vue.component('hello', {
+  template: '<p>hello</p>'
+});
+
+
 var vm = new Vue({
   // el: '#app',
   //data: プロパティを書ける
