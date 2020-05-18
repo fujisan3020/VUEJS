@@ -26,3 +26,13 @@ var vm = new Vue({
 // $mountメソッド : elプロパティを後付けするメソッド
 // 基本的には使用しないが、たまに使う。elプロパティを動的に変化させる時やlプロパティを後から設定する時などに使う
 vm.$mount('#app')
+
+new Vue({
+  // el: '#app2',
+  data: {
+    name: 'よしぴー'
+  },
+  // template(プロパティ) : template構文の他の記載方法
+  template: '<h1>こんにちは、{{ name }}</h1>'
+}).$mount('#app2')
+// $mountはVueインスタンスの最後に付け加えるような記載もできる
