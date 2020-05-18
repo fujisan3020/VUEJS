@@ -1,9 +1,13 @@
+// Vue.jsでは外部にオブジェクトを作成して、そのオブジェクトを他のオブジェクトのデータに指定することもできる
+var data = {
+  message: 'こんにちは',
+  name: 'よしぴー',
+}
+
 var vm = new Vue({
   el: '#app',
   //data: プロパティを書ける
-  data: {
-    message: 'こんにちは',
-  },
+  data: data,
   //computed : メソッドを処理をプロパティにしたもの
   computed: {
 
@@ -19,11 +23,9 @@ var vm = new Vue({
   }
 })
 
-// Vueインスタンスに格納されているプロパティは、getter, setter, watcherが設定・付与され、リアクティブ(main.jsの値が変わると、index.htmlの値が変わること)になっている
-vm.message = '変更しました';
-
-// プロパティは後から追加することはできない
-// 後から追加されたプロパティは、getter, setter, watcherが設定・付与されておらず、リアクティブにならない
-vm.name = 'よしぴー'
+console.log(data === vm.$data);
 
 console.log(vm);
+
+// Vueインスタンスプロパティで、頭に $ が付いたものはユーザーが使うユーザー定義のプロパティである
+console.log(vm.$data);
