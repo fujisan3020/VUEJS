@@ -1,11 +1,10 @@
-// Vue.jsでは外部にオブジェクトを作成して、そのオブジェクトを他のオブジェクトのデータに指定することもできる
 var data = {
   message: 'こんにちは',
   name: 'よしぴー',
 }
 
 var vm = new Vue({
-  el: '#app',
+  // el: '#app',
   //data: プロパティを書ける
   data: data,
   //computed : メソッドを処理をプロパティにしたもの
@@ -24,10 +23,6 @@ var vm = new Vue({
 
   }
 })
-
-console.log(data === vm.$data);
-
-console.log(vm);
-
-// Vueインスタンスプロパティで、頭に $ が付いたものはユーザーが使うユーザー定義のプロパティである
-console.log(vm.$data);
+// $mountメソッド : elプロパティを後付けするメソッド
+// 基本的には使用しないが、たまに使う。elプロパティを動的に変化させる時やlプロパティを後から設定する時などに使う。
+vm.$mount('#app')
