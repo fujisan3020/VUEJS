@@ -44,7 +44,7 @@ new Vue({
     name: 'よしぴー'
   },
   // render(関数) : template構文の他の記載方法(2)
-  // これは仮想ノードを作ってDOMの描画を行う
+  // 仮想ノードを作ってDOMの描画を行う
   render: function(createElement) {
     console.log(createElement('h1', 'こんにちは、' + this.name));
     // createElement引数(第一引数：タグ, 第二引数：値)
@@ -58,3 +58,40 @@ console.log(dir);
 console.dir(dir);
 console.log(document);
 console.dir(document);
+
+
+new Vue({
+  el:'#app4',
+  data: {
+    name: 'よしぴー'
+  },
+  beforeCreate: function() {
+    console.log('beforeCreate');
+  },
+  created: function() {
+    console.log('created');
+  },
+  beforeMount: function() {
+    console.log('beforeMount');
+  },
+  mounted: function() {
+    console.log('mounted');
+  },
+  beforeUpdate: function() {
+    console.log('beforeUpdate');
+  },
+  updated: function() {
+    console.log('updated');
+  },
+  beforeDestory: function() {
+    console.log('beforeDestory');
+  },
+  destoryed: function() {
+    console.log('destoryed');
+  },
+  methods: {
+    destory: function() {
+      this.$destroy()
+    }
+  }
+})
