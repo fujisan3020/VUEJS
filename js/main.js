@@ -10,7 +10,9 @@ var vm = new Vue({
   data: data,
   //computed : メソッドを処理をプロパティにしたもの
   computed: {
-
+    myData: function() {
+      return this.$data
+    }
   },
   //methods: 関数宣言の場所
   methods: {
